@@ -1,3 +1,16 @@
-<h1>
+
+  <h1>
   {{title}}
 </h1>
+ <table border="1">
+    <thead>
+      <td>NAME</td>
+      <td>INDEX</td>
+    </thead>
+    <tbody>
+      <tr *ngFor="let name of studentName; let i=index">
+         <td [style.color]="i%2===0?'green':'red'">{{name}}</td>
+         <td [style.color]="i%2===0?'green':'red'"> {{[i]}}</td>
+      </tr>
+    </tbody>
+   </table>
